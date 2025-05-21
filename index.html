@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Compound Interest Calculator</title>
+    <!-- Link to external CSS file for styling -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Main calculator form with submit handler -->
+    <form class="calculator" onsubmit="calculateCompoundInterest(); return false;">
+        <h2>Compound Interest Calculator</h2>
+        
+        <!-- Input field for principal amount -->
+        <label for="principal">Principal (P):</label>
+        <input type="number" id="principal" placeholder="Enter principal amount" min="0" step="any" required><br>
+        
+        <!-- Input field for annual interest rate -->
+        <label for="rate">Annual Interest Rate (r) (in decimal):</label>
+        <input type="number" id="rate" placeholder="Enter rate (e.g., 0.05 for 5%)" min="0" step="any" required><br>
+        
+        <!-- Input field for compounding frequency -->
+        <label for="compoundTimes">Number of Times Interest Compounded per Year (n):</label>
+        <input type="number" id="compoundTimes" placeholder="Enter compound times" min="1" step="1" required><br>
+        
+        <!-- Input field for number of years -->
+        <label for="years">Number of Years (t):</label>
+        <input type="number" id="years" placeholder="Enter years" min="0" step="any" required><br>
+        
+        <!-- Calculate button triggers interest calculation -->
+        <button type="submit">Calculate</button>
+        <!-- Reset button clears all input fields -->
+        <button type="reset">Reset</button>
+        
+        <!-- Display area for calculation results -->
+        <p id="result"></p>
+    </form>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
